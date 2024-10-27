@@ -16,23 +16,15 @@ int main() {
 
     if (pa < pb && pa < pc) {
         printf("A");
-    } else if (pb < pa && pb < pc) {
+    } else if (pb < pc) {
         printf("B");
-    } else if (pc < pa && pc < pb) {
-        printf("C");
-    } else if (pa == pb && pa < pc) {
-        printf("A B");
-    } else if (pa == pc && pa < pb) {
-        printf("A C");
-    } else if (pb == pc && pb < pa) {
-        printf("B C");
     } else {
-        printf("A B C");
+        printf("C");
     }
 
     return 0;
 }
 
-float getDistanceByCoordinates(float aX, float aY, float aZ, float bX, float bY, float bZ) {
+float getDistanceByCoordinates(const float aX, const float aY, const float aZ, const float bX, const float bY, const float bZ) {
     return sqrt(pow(bX - aX, 2.0) + pow(bY - aY, 2.0) + pow(bZ - aZ, 2.0));
 }
